@@ -3,7 +3,7 @@
 }
 
 :root {
-  --cell-size: 100px;
+  --cell-size: 30vh;
   --mark-size: calc(var(--cell-size) * .9);
 }
 
@@ -76,7 +76,7 @@ body {
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
-  content: ' ';
+  content: '';
   position: absolute;
   width: calc(var(--mark-size) * .15);
   height: var(--mark-size);
@@ -112,6 +112,16 @@ body {
   width: calc(var(--mark-size) * .7);
   height: calc(var(--mark-size) * .7);
   background-color: white;
+}
+
+.line {
+  cursor: not-allowed;
+  background-color: red;
+  content: '';
+  position: absolute;
+  width: calc(var(--cell-size) * .05);
+  height: var(--cell-size) * 3;
+
 }
 
 .winning-message {
